@@ -24,7 +24,7 @@ jobs:
         uses: hashicorp/setup-terraform@v1
 
       - name: Terraform Init
-        run: terraform init -input=false Terraform/main/
+        run: terraform -chdir=Terraform/main/ init -input=false
 
       - name: Terraform Validate
         run: terraform validate -chdir=Terraform/main/
